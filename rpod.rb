@@ -5,13 +5,13 @@
 class Rpod < Formula
   desc "Agent-native CLI for RunPod (GPU pods, network volumes, GPU type discovery)"
   homepage "https://github.com/kdubb1337/rpod-cli"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.0/rpod-cli_0.6.0_darwin_amd64.tar.gz"
-      sha256 "36fb9cefe5b22285020d606d1404ea41e6535c01b26c340da188d17fd4b9f770"
+      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.1/rpod-cli_0.6.1_darwin_amd64.tar.gz"
+      sha256 "fa61258cb82a038e1691c60ac4e95c5ce87fcc8b98d2b5c7bb7d0b48f8a30339"
 
       define_method(:install) do
         bin.install "rpod"
@@ -19,8 +19,8 @@ class Rpod < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.0/rpod-cli_0.6.0_darwin_arm64.tar.gz"
-      sha256 "d8308f9c2951c428712dc13ed81c9cc4c43ef7438ab04f246b0b1ad9541749e8"
+      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.1/rpod-cli_0.6.1_darwin_arm64.tar.gz"
+      sha256 "494b193fc3e7dcd3c2f7e038dff2c24f8277602d2658e48f01cd2bbc66265ecd"
 
       define_method(:install) do
         bin.install "rpod"
@@ -31,16 +31,16 @@ class Rpod < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.0/rpod-cli_0.6.0_linux_amd64.tar.gz"
-      sha256 "80e07576e4955b04d8a92951c4217cc2748a012984402b2e6f6131b3734a6a25"
+      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.1/rpod-cli_0.6.1_linux_amd64.tar.gz"
+      sha256 "3729af351d5f34f5b0f099174f586c9bc21b1ef1be930a90c119abe608e331c8"
       define_method(:install) do
         bin.install "rpod"
         pkgshare.install "skills" if File.directory?("skills")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.0/rpod-cli_0.6.0_linux_arm64.tar.gz"
-      sha256 "23ffb1aa58a7475c5c01ffabbc7f2af72e260ae854db71758c760943ee9bfe9a"
+      url "https://github.com/kdubb1337/rpod-cli/releases/download/v0.6.1/rpod-cli_0.6.1_linux_arm64.tar.gz"
+      sha256 "2fbf9251783a8b9d931e6f82592926102e0aa6fe38fd7bcfae63bff592f647dd"
       define_method(:install) do
         bin.install "rpod"
         pkgshare.install "skills" if File.directory?("skills")
