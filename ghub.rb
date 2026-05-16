@@ -5,13 +5,13 @@
 class Ghub < Formula
   desc "Agent-native CLI for GitHub"
   homepage "https://github.com/kdubb1337/ghub"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.0/ghub_0.1.0_darwin_amd64.tar.gz"
-      sha256 "a43a7cf89a6d5fa40d6d797e11837b00b9b8098756c253b976ec9fdccb176061"
+      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.1/ghub_0.1.1_darwin_amd64.tar.gz"
+      sha256 "254bbb17eac1c252f6bfa583c73f505aad87310002549f7f1104397c6ffaa243"
 
       define_method(:install) do
         bin.install "ghub"
@@ -19,8 +19,8 @@ class Ghub < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.0/ghub_0.1.0_darwin_arm64.tar.gz"
-      sha256 "2e26151d858130efb43a8837381670f39112bb5df4f16483f5d5b7c1b4c9dcc5"
+      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.1/ghub_0.1.1_darwin_arm64.tar.gz"
+      sha256 "8964cc47510772ce2ec922ba6da7f3046af30c8faaa0ab2588af6679de1fb19a"
 
       define_method(:install) do
         bin.install "ghub"
@@ -31,16 +31,16 @@ class Ghub < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.0/ghub_0.1.0_linux_amd64.tar.gz"
-      sha256 "7942bace1a3ccdc4236367a635db036c156269d54b883d372ddb64698a091045"
+      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.1/ghub_0.1.1_linux_amd64.tar.gz"
+      sha256 "fc75e067187e28a116479d241db2c2e65308f0543833e6ea415918ad92cc55a7"
       define_method(:install) do
         bin.install "ghub"
         pkgshare.install "skills" if File.directory?("skills")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.0/ghub_0.1.0_linux_arm64.tar.gz"
-      sha256 "387341e2339c0dfd9073fd631119c71522145b15a59ccceab49483a076f4cb71"
+      url "https://github.com/kdubb1337/ghub/releases/download/v0.1.1/ghub_0.1.1_linux_arm64.tar.gz"
+      sha256 "4cee3eeea683cbce9257bf4dbea9950be2cfd6dd5533001208f87fc343ee5095"
       define_method(:install) do
         bin.install "ghub"
         pkgshare.install "skills" if File.directory?("skills")
