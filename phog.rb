@@ -5,13 +5,13 @@
 class Phog < Formula
   desc "Agent-native CLI for PostHog — query events, web activity, insights, and persons via the PostHog API"
   homepage "https://github.com/kdubb1337/phog-cli"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.2.0/phog-cli_0.2.0_darwin_amd64.tar.gz"
-      sha256 "4cf2a4980758ff4fe5288abdef4ad4aeb2d68df7352612396215744efcaefe1c"
+      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.3.0/phog-cli_0.3.0_darwin_amd64.tar.gz"
+      sha256 "00245f156a36210e3556cc6d0600b2fd3f015f9af8304e58cbeed2ccff0dc989"
 
       define_method(:install) do
         bin.install "phog"
@@ -19,8 +19,8 @@ class Phog < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.2.0/phog-cli_0.2.0_darwin_arm64.tar.gz"
-      sha256 "03653f7782975335b5aa832b1dac34bae22870849fe3a1534bfefbd27d67645d"
+      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.3.0/phog-cli_0.3.0_darwin_arm64.tar.gz"
+      sha256 "2053f9f62ee488b6719b7ba2e8e10a1af03edb88eae7252907dcca205ef480f2"
 
       define_method(:install) do
         bin.install "phog"
@@ -31,16 +31,16 @@ class Phog < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.2.0/phog-cli_0.2.0_linux_amd64.tar.gz"
-      sha256 "366e62ae5d545dd863b125f85f0b77e3fb77f198a5909124e82c476b6c13f829"
+      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.3.0/phog-cli_0.3.0_linux_amd64.tar.gz"
+      sha256 "cc7738d30a383960cfb619279665c91ccdd03d1a079a0352a9e8305745603b40"
       define_method(:install) do
         bin.install "phog"
         pkgshare.install "skills" if File.directory?("skills")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.2.0/phog-cli_0.2.0_linux_arm64.tar.gz"
-      sha256 "d82c204edf4be0a5ff7794251a3650fc8566fd78b213e1ba651ee22a474e0828"
+      url "https://github.com/kdubb1337/phog-cli/releases/download/v0.3.0/phog-cli_0.3.0_linux_arm64.tar.gz"
+      sha256 "9e4c2c3d3763e664bd79a88ca212f8f10cb339c931fc82d5cb40e27f1debae09"
       define_method(:install) do
         bin.install "phog"
         pkgshare.install "skills" if File.directory?("skills")
