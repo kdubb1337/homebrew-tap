@@ -5,13 +5,13 @@
 class Fin < Formula
   desc "Agent-native CLI for Plaid / personal banking data"
   homepage "https://github.com/kdubb1337/fin-cli"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.2.0/fin-cli_0.2.0_darwin_amd64.tar.gz"
-      sha256 "e960a3e1bccbfc41da6d97a70b883eb35a4adfce37e67485ed423bdb0828836c"
+      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.3.0/fin-cli_0.3.0_darwin_amd64.tar.gz"
+      sha256 "2a52a7c644c168234f010e53ec0289154af46a8ec2f7f33a600a1988088d9c7c"
 
       define_method(:install) do
         bin.install "fin"
@@ -19,8 +19,8 @@ class Fin < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.2.0/fin-cli_0.2.0_darwin_arm64.tar.gz"
-      sha256 "88d4ed75d630d34de41b296930884b0b35d826c338f508082cb60a7616089c22"
+      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.3.0/fin-cli_0.3.0_darwin_arm64.tar.gz"
+      sha256 "285e8946353ad3f84881b2708d1a4e86194d195a1d210dae1f2072cf8bd83d63"
 
       define_method(:install) do
         bin.install "fin"
@@ -31,16 +31,16 @@ class Fin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.2.0/fin-cli_0.2.0_linux_amd64.tar.gz"
-      sha256 "9975ca65e9beefb7766b9acb72bdc4c2fc567fc0c85075d8a152b2c87ec4a27d"
+      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.3.0/fin-cli_0.3.0_linux_amd64.tar.gz"
+      sha256 "a9fc05091381d88834bce0148fd6a72977c819eeda56d4bd6ef800832e37715f"
       define_method(:install) do
         bin.install "fin"
         pkgshare.install "skills" if File.directory?("skills")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.2.0/fin-cli_0.2.0_linux_arm64.tar.gz"
-      sha256 "64a4795ae238fd60e949ab48f08b2ef11ea86b3706770a4803b58f4488bcae1e"
+      url "https://github.com/kdubb1337/fin-cli/releases/download/v0.3.0/fin-cli_0.3.0_linux_arm64.tar.gz"
+      sha256 "f390c24ff43737185e7bdbdab82d790259b5f5e2cec18e6849d54bca3a013380"
       define_method(:install) do
         bin.install "fin"
         pkgshare.install "skills" if File.directory?("skills")
